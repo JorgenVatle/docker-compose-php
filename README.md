@@ -14,7 +14,7 @@ git clone https://github.com/JorgenVatle/docker-compose-php.git
 docker-compose up
 ```
 
-Once started, you'll have access yo your app on [localhost:8050](http://localhost:8050)
+Once started, you'll have access to your app on [localhost:8050](http://localhost:8050)
 
 ## Servers
 
