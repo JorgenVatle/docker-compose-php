@@ -42,7 +42,7 @@ Password: N/A
 ##### NGINX
 Available on [localhost:8050](http://localhost:8050)
 
-Within Docker: [web:80](http://web:8050)
+Within Docker: [web:80](http://web:80)
 
 ##### PHP-FPM
 Available only within Docker on [php-fpm:9000](#)
