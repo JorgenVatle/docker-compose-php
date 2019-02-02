@@ -17,14 +17,9 @@ docker-compose up
 Once started, you'll have access yo your app on [localhost:8050](http://localhost:8050)
 
 ## Servers
-##### NGINX
-Available on [localhost:8050](http://localhost:8050)
-
-##### PHP-FPM
-Available only within Docker on [php-fpm:9000](fpm://localhost:9000)
 
 ##### MySQL
-A MySQL server is also exposed on [localhost:8051](mysql://localhost:8051)
+A MySQL server is exposed on [localhost:8051](mysql://localhost:8051)
 
 On localhost:
 ```text
@@ -43,3 +38,10 @@ Database: compose_php
 Username: root
 Password: N/A
 ```
+
+##### NGINX
+Available on [localhost:8050](http://localhost:8050)
+Within Docker: [web:80](http://web:8050)
+
+##### PHP-FPM
+Available only within Docker on [php-fpm:9000](fpm://localhost:9000)
