@@ -1,12 +1,28 @@
 version: '3.3'
 
 services:
+  db:
+    image: mariadb:10.4
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    ports:
+      - 8051:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_DATABASE: compose_php
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+
   php-fpm:
     build:
       context: ./
       dockerfile: .docker/php-fpm.dockerfile
     volumes:
       - ./:/var/www
+    depends_on:
+      - db
     working_dir: /var/www
     restart: always
 
